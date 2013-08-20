@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="library/minim/library/jl1.0.jar"/>
+	<classpathentry kind="lib" path="library/minim/library/jsminim.jar"/>
+	<classpathentry kind="lib" path="library/minim/library/minim.jar"/>
+	<classpathentry kind="lib" path="library/minim/library/mp3spi1.9.4.jar"/>
+	<classpathentry kind="lib" path="library/minim/library/tritonus_aos.jar"/>
+	<classpathentry kind="lib" path="library/minim/library/tritonus_share.jar"/>
+	<classpathentry kind="lib" path="library/video/library/gstreamer-java.jar"/>
+	<classpathentry kind="lib" path="library/video/library/jna.jar"/>
+	<classpathentry kind="lib" path="library/video/library/video.jar"/>
+	<classpathentry kind="lib" path="library/OBJLoader/OBJLoader.jar"/>
+	<classpathentry kind="lib" path="library/core/core.jar"/>
+	<classpathentry kind="lib" path="library/core/gluegen-rt-natives-macosx-universal.jar"/>
+	<classpathentry kind="lib" path="library/core/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="library/core/jogl-all-natives-macosx-universal.jar"/>
+	<classpathentry kind="lib" path="library/core/jogl-all.jar"/>
+	<classpathentry kind="lib" path="library/SimpleOpenNI/SimpleOpenNI.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
