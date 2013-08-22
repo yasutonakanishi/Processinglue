@@ -1,3 +1,4 @@
+package net.unitedfield.pglue;
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
@@ -12,19 +13,20 @@ public class P4PDisplay {
 	PImage	appletImage;
 	
 	JFrame	frame;
+	private final int	frameBarHeight =20;
 	boolean frameVisible = true;
 	
 	PVector	loc, rot;
 	int 	dWidth=100,	dHeight=100;	//width and height of Display
 		
-	P4PDisplay(int dWidth, int dHeight, PApplet srcApplet, int appletWidth, int appletHeight){
+	public	P4PDisplay(int dWidth, int dHeight, PApplet srcApplet, int appletWidth, int appletHeight){
 		this.dWidth  = dWidth;
 		this.dHeight = dHeight;
 		this.srcApplet = srcApplet;			
 		
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
-        frame.setSize(appletWidth, appletHeight);        
+        frame.setSize(appletWidth, appletHeight+frameBarHeight);        
         if(frameVisible)
         	frame.setVisible(true);
         frame.add(srcApplet, BorderLayout.CENTER);
@@ -50,8 +52,7 @@ public class P4PDisplay {
 			for (int i = 0; i < this.srcApplet.pixels.length; i++) 
 				this.appletImage.pixels[i] = this.srcApplet.pixels[i];
 			this.appletImage.updatePixels();		
-		}catch(ArrayIndexOutOfBoundsException aiobe){
-			
+		}catch(ArrayIndexOutOfBoundsException aiobe){			
 		}
 	}
 	

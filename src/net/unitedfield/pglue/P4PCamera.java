@@ -1,3 +1,4 @@
+package net.unitedfield.pglue;
 import java.awt.BorderLayout;
 import java.awt.Image;
 
@@ -17,15 +18,16 @@ public class P4PCamera {
 	PFrustumPyramid	frustum;
 	
 	private	JFrame	frame;
+	private final int	frameBarHeight =20;
 	private	JPanel	panel;
 	
-	P4PCamera(PApplet parent, int width, int height){		
+	public	P4PCamera(PApplet parent, int width, int height){		
 		cameraGraphics = (PGraphics3D)parent.createGraphics(width, height, PApplet.P3D);
 		//this.parentPApplet = (Draw2Offscreen)parent;
 		
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
-        frame.setSize(cameraGraphics.width, cameraGraphics.height);                	
+        frame.setSize(cameraGraphics.width, cameraGraphics.height+frameBarHeight);                	
        	panel = new JPanel();        	        
     	frame.add(panel, BorderLayout.CENTER);
     	frame.setResizable(false);        	        
@@ -33,7 +35,7 @@ public class P4PCamera {
     	
     	this.loc = new PVector(0,0,0);
     	this.lookAt = new PVector(0,0,0);    	
-    	frustum = new PFrustumPyramid(loc, lookAt);	
+    	frustum = new PFrustumPyramid(loc, lookAt, cameraGraphics);	
 	}
 		
 	public	void	setLocation(float x, float y, float z){
@@ -71,6 +73,7 @@ public class P4PCamera {
 	
 	public	void	draw(PGraphics3D g){		
 		g.stroke(128);
+		g.strokeWeight(1);		
 		g.pushMatrix();
 		g.translate(loc.x,loc.y,loc.z);		
 		g.sphere(5);		

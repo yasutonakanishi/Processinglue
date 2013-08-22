@@ -1,3 +1,4 @@
+package simulation.p5;
 import processing.core.PApplet;
 
 public class SineWave extends PApplet {

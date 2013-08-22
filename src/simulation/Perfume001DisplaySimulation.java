@@ -1,10 +1,14 @@
+package simulation;
+
+import net.unitedfield.pglue.P4PDisplay;
 import processing.core.PApplet;
 import processing.opengl.PGraphics3D;
+import simulation.p5.SoundSpectrum;
 
 import com.rhizomatiks.bvh.BvhBone;
 import com.rhizomatiks.bvh.BvhParser;
 
-public class Perfume001DisplayTest extends PApplet{
+public class Perfume001DisplaySimulation extends PApplet{
 	BvhParser parserA = new BvhParser();
 	PBvh bvh1, bvh2, bvh3;
 
@@ -97,16 +101,6 @@ public class Perfume001DisplayTest extends PApplet{
 	    }
 	  }
 	}
-	//PBvh
-	  
-	static public void main(String[] passedArgs) {	    
-		String[] appletArgs = new String[] { "Perfume001DisplayTest" };
-	    if (passedArgs != null) {
-	      PApplet.main(concat(appletArgs, passedArgs));
-	    } else {
-	      PApplet.main(appletArgs);
-	    }	  
-	}
-	
+	//PBvh	 	
 }
 

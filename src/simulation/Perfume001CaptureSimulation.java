@@ -1,5 +1,11 @@
+package simulation;
+
+import net.unitedfield.pglue.Draw2PGraphics3D;
+import net.unitedfield.pglue.P4PCapture;
+import net.unitedfield.pglue.P4PDisplay;
 import processing.core.PApplet;
 import processing.opengl.PGraphics3D;
+import simulation.p5.opticalflow;
 
 import com.rhizomatiks.bvh.BvhBone;
 import com.rhizomatiks.bvh.BvhParser;
@@ -7,7 +13,7 @@ import com.rhizomatiks.bvh.BvhParser;
 import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 
-public class Perfume001CaptureTest extends PApplet implements Draw2PGraphics3D {
+public class Perfume001CaptureSimulation extends PApplet implements Draw2PGraphics3D {
 	BvhParser parserA = new BvhParser();
 	PBvh bvh1, bvh2, bvh3;
 
@@ -149,15 +155,6 @@ public class Perfume001CaptureTest extends PApplet implements Draw2PGraphics3D {
 		  }		  
 	  }	  
 	}
-	//PBvh
-	  
-	static public void main(String[] passedArgs) {	    
-		String[] appletArgs = new String[] { "Perfume001CaptureTest" };
-	    if (passedArgs != null) {
-	      PApplet.main(concat(appletArgs, passedArgs));
-	    } else {
-	      PApplet.main(appletArgs);
-	    }	  
-	}	
+	//PBvh	 	
 }
 

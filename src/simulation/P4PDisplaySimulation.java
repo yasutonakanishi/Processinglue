@@ -1,7 +1,11 @@
+package simulation;
+
+import net.unitedfield.pglue.P4PDisplay;
 import processing.core.PApplet;
 import processing.core.PVector;
 import processing.opengl.PGraphics3D;
 import saito.objloader.OBJModel;
+import simulation.p5.Distance2D;
 
 public class P4PDisplaySimulation extends PApplet {
 	PApplet	appletForDisplay;
