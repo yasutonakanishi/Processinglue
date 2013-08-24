@@ -63,13 +63,15 @@ public class P4PCamera {
 		cameraImage = cameraGraphics.get(0, 0, cameraGraphics.width, cameraGraphics.height);
 		return cameraImage;
 	}
-	
+		
 	public	void showImageFrame(){                      
 		if(panel !=null && frame!=null){
-			frame.setVisible(true);
+			if(frame.isVisible() == false)
+				frame.setVisible(true);
 			panel.getGraphics().drawImage((Image)cameraImage.getNative(),0,0,null);			
-		}      
-	}
+		}
+	}	
+	
 	
 	public	void	draw(PGraphics3D g){		
 		g.stroke(128);
