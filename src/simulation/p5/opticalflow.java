@@ -67,7 +67,7 @@ float wflow=0.1f; // smaller value for longer smoothing
 // switch
 boolean flagseg=false; // segmentation of moving objects?
 boolean flagball=false; // playing ball game?
-boolean flagmirror=false; // mirroring image?
+boolean flagmirror=true; // mirroring image?
 boolean flagflow=true; // draw opticalflow vectors?
 boolean flagsound=false; // sound effect?
 boolean flagimage=true; // show video image ?

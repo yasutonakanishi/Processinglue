@@ -39,11 +39,11 @@ public class Perfume001CaptureSimulation extends PApplet implements Draw2PGraphi
 	  capture	= new P4PCapture(this,320,240);
 	  opticalflow opt = new opticalflow();
 	  opt.setCapture(capture);
-	  display	= new P4PDisplay(1600, 1200, opt, 320, 240);	  	  	  
+	  display	= new P4PDisplay(this, 1600, 1200, opt, 320, 240, true);	  	  	  
 	  // deploy devices
 	  capture.setLocation(width/2, 200, 350);
 	  capture.setLookAt(width/2,   200, -200);
-	  display.setLocation(width/2, -300, -1500);
+	  display.translate(width/2, -300, -1500);
 
 	  // set music
 	  minim = new Minim(this);
@@ -96,9 +96,9 @@ public class Perfume001CaptureSimulation extends PApplet implements Draw2PGraphi
 		g3d.popMatrix();
 		
 		//display
-		if(g3d == this.g) // if you want that display is not captured with camera. this works like putting a optical filter to camera
-			display.draw(g3d);
-		//display.draw(g3d);	
+		//if(g3d == this.g) // if you want that display is not captured with camera. this works like putting a optical filter to camera
+			//display.draw(g3d);
+		display.draw(g3d);	
 		capture.draw(g3d);
 	}
 	

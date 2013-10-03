@@ -26,8 +26,8 @@ public class Perfume001DisplaySimulation extends PApplet{
 	  bvh3 = new PBvh( loadStrings( "kashiyuka.bvh" ) );
 	  
 	  applet = new SoundSpectrum();
-	  display = new P4PDisplay(128, 120, applet, 512, 480);	
-	  display.setLocation(640, 60, 0);
+	  display = new P4PDisplay(this, 128, 120, applet, 512, 480, true);
+	  display.translate(640, 60, 0);
 		
 	  loop();
 	}
@@ -60,7 +60,7 @@ public class Perfume001DisplaySimulation extends PApplet{
 	  bvh3.draw();
 	  popMatrix();
 	  		
-	  display.draw((PGraphics3D)this.g);		
+	  display.draw();		
 	}
 
 	// PBvh

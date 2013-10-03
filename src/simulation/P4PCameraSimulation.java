@@ -22,8 +22,8 @@ public class P4PCameraSimulation extends PApplet implements Draw2PGraphics3D {
 		
 		//appletForDisplay = new SineWave();
 		appletForDisplay = new Distance2D();		
-		vDisplay = new P4PDisplay(500, 100, appletForDisplay, 640, 360);	
-		vDisplay.setLocation(0,-150,0);
+		vDisplay = new P4PDisplay(this, 500, 100, appletForDisplay, 640, 360, true);	
+		vDisplay.translate(0,-150,0);
  	    
 	    vCamera = new P4PCamera(this, 320, 240);
 	    vCamera.setLocation(200, 0, -100);
@@ -52,7 +52,7 @@ public class P4PCameraSimulation extends PApplet implements Draw2PGraphics3D {
 	    	
 	    	// display		
 	  	  	ry += 0.001;				
-	  	  	vDisplay.setRotation(0f, ry, 0f);	  	  	
+	  	  	vDisplay.rotate(0f, ry, 0f);	  	  	
 	  	  	vDisplay.draw(g3d);
 	  	  	
 	  	  	vCamera.draw(g3d);

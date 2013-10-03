@@ -12,8 +12,8 @@ import processing.opengl.PGraphics3D;
 
 public class P4PCamera {
 	//Draw2Offscreen	parentPApplet;
-	protected	PGraphics3D	cameraGraphics;
-	protected	PImage		cameraImage;
+	public	PGraphics3D	cameraGraphics;
+	PImage		cameraImage;
 	PVector	loc, lookAt;
 	PFrustumPyramid	frustum;
 	
@@ -52,7 +52,7 @@ public class P4PCamera {
 		frustum.setLookAt(x,y,z);
 	}
 		
-	public	PImage capture(Draw2PGraphics3D dst){		
+	public	PImage capture(Draw2PGraphics3D dst){
 		cameraGraphics.beginDraw();
 		cameraGraphics.camera(
 				loc.x, loc.y, loc.z,			//eyeX, eyeY, eyeZ, 
@@ -78,7 +78,7 @@ public class P4PCamera {
 		g.strokeWeight(1);		
 		g.pushMatrix();
 		g.translate(loc.x,loc.y,loc.z);		
-		g.sphere(5);		
+		g.sphere(3);		
 		g.popMatrix();		
 		if(frustum != null)
 			frustum.draw(g);

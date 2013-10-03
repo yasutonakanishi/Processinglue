@@ -14,7 +14,7 @@ import processing.video.Capture;
 
 public class P4PCapture extends Capture{
 	protected	Draw2PGraphics3D	parentPApplet;
-	protected	PGraphics3D	cameraGraphics;
+	public	PGraphics3D	cameraGraphics;
 	protected	PImage		cameraImage;	
 	
 	protected	PVector	loc, lookAt, dir;
@@ -77,7 +77,7 @@ public class P4PCapture extends Capture{
 		newFrame = true;		
 	}
 	
-	public	void	setLocation(int x, int y, int z){
+	public	void	setLocation(float x, float y, float z){
 		this.loc.x = x;
 		this.loc.y = y;
 		this.loc.z = z;
@@ -88,7 +88,7 @@ public class P4PCapture extends Capture{
 		return loc;
 	}
 	
-	public	void	setLookAt(int x, int y, int z){
+	public	void	setLookAt(float x, float y, float z){
 		this.lookAt.x = x;
 		this.lookAt.y = y;
 		this.lookAt.z = z;
@@ -113,7 +113,7 @@ public class P4PCapture extends Capture{
 		g.strokeWeight(1); 
 		g.pushMatrix();
 		g.translate(loc.x,loc.y,loc.z);		
-		g.sphere(5);		
+		g.sphere(3);		
 		g.popMatrix();
 		
 		if(frustum != null)		frustum.draw(g);	
