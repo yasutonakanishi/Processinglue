@@ -1,20 +1,20 @@
 package simulation;
 
+import net.unitedfield.pglue.P4PBezierDisplay;
 import net.unitedfield.pglue.P4PCylinderDisplay;
 import processing.core.PApplet;
 import processing.core.PVector;
 import saito.objloader.OBJModel;
 import simulation.p5.ColorBars;
-import simulation.p5.SineWave;
 
-public class P4PCylinderDisplaySimulation extends PApplet {
+public class P4PBezierDisplaySimulation extends PApplet {
 	float rotX, rotY;
 		
 	OBJModel model;
 	
-	PApplet	applet1, applet1back, applet2;
-	P4PCylinderDisplay cylinderdisplay1, cylinderdisplay1back, cylinderdisplay2;
-	
+	PApplet	applet1;
+	P4PBezierDisplay bezierdisplay;
+		
 	public	void	setup(){
 		size(640,480,P3D);
 
@@ -24,15 +24,12 @@ public class P4PCylinderDisplaySimulation extends PApplet {
 	    model.translate(new PVector(0,0,300));
 	    
 		applet1 = new ColorBars();
-		applet1back = new SineWave();
-		cylinderdisplay1 = new P4PCylinderDisplay(this, 30f, 30f, 32, applet1, 200,200, false);
-		cylinderdisplay1back = new P4PCylinderDisplay(this, 29.5f, 30f, 32, applet1back, 640,360, false);
-		cylinderdisplay1.translate(0,-15, 0);
-		cylinderdisplay1back.translate(0,-15, 0);	
-		
-		applet2 = new ColorBars();
-		cylinderdisplay2 = new P4PCylinderDisplay(this, 20f, 120f, 32, applet2, 200,200, false);
-		cylinderdisplay2.translate(50,-60, 50);		
+		PVector p00 = new PVector(20, 0,-200);
+		PVector	p01 = new PVector(180,0,-30);
+		PVector	p02 = new PVector(220,0,-200);
+		PVector	p03 = new PVector(450,0,-100);
+		bezierdisplay = new P4PBezierDisplay(this, p00,p01,p02,p03, 300f, applet1, 200,200, false);		
+		bezierdisplay.translate(0,-150, 300);
 	}
 	
 	public void	draw(){
@@ -53,9 +50,7 @@ public class P4PCylinderDisplaySimulation extends PApplet {
 	    model.draw();
 	    	
 	    // display	  	  	
-  	  	cylinderdisplay1.draw();	
-  	  	cylinderdisplay1back.draw();  	  	
-  	  	cylinderdisplay2.draw();
+	    bezierdisplay.draw();
 	}
 
 	public void mouseDragged(){

@@ -17,9 +17,9 @@ public class P4PDisplay {
 	boolean frameVisible = false;
 	
 	PVector	loc, rot;
-	int 	dWidth=100,	dHeight=100;	//width and height of Display
+	float 	dWidth=100,	dHeight=100;	//width and height of Display
 		
-	public	P4PDisplay(PApplet parentApplet, int dWidth, int dHeight, 
+	public	P4PDisplay(PApplet parentApplet, float dWidth, float dHeight, 
 						PApplet dstApplet, int appletWidth, int appletHeight, boolean frameVisible){
 		this.parentApplet = parentApplet;
 		this.dWidth  = dWidth;
@@ -79,14 +79,18 @@ public class P4PDisplay {
 		g.pushMatrix();		
 		g.translate(loc.x, loc.y, loc.z);
 		g.rotateX(rot.x);g.rotateY(rot.y);g.rotateZ(rot.z);		
+		drawShape(g);
+		g.popMatrix();
+	}
+	
+	protected	void	drawShape(PGraphics3D g){
 		g.beginShape();		  
 		g.texture(appletImage);
 		g.vertex(-dWidth/2, -dHeight/2, 0, 0, 0);
 		g.vertex( dWidth/2, -dHeight/2, 0, appletImage.width, 0);		  
 		g.vertex( dWidth/2,  dHeight/2, 0, appletImage.width, appletImage.height);		 
 		g.vertex(-dWidth/2,  dHeight/2, 0, 0, appletImage.height);
-		g.endShape();		
-		g.popMatrix();		
+		g.endShape();	
 	}
 		
 	public	PImage	getPImage(){
