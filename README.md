@@ -5,7 +5,9 @@
 
 In **Processinglue**, Processing on virtual display runs in P3D Processing.
 
-**Processinglue** is a package for simulating how an interactive system developed using Processing runs in a P3D virtual space, and is a successor of [Citycompiler]. It is possible to sketch or prototype interactive system with various size or location of displays. It aims to take PApplet out from small display world.
+**Processinglue** is a package for simulating how an interactive system developed with Processing runs in a virtual space, and is a successor of [Citycompiler]. 
+
+It is possible to sketch or prototype interactive system with various sizes or locations of displays. This enables to take PApplet out from small display world and help to exhibit [Processing installation].
 
 Virtual Input/Output devices for processing are available as follows.
 
@@ -20,8 +22,13 @@ Virtual projector or virtual distance sensor is working on CityCompiler, but is 
 
 Sample movies are uploaded at [Processinglue sample movies on vimeo] and [CityCompiler sample movies on vimeo].
 
+For sample simulations, [class showing BVH data by Rhizomatiks] and [saito obj loader] are in the project file.
+
 Copyright &copy; 2012 Yasuto Nakanishi (<naka@acm.org>) Licensed under the BSD License.
 
 [Citycompiler]:https://github.com/yasutonakanishi/CC4p52
+[Processing installation]:http://processing.org/exhibition/
 [CityCompiler sample movies on vimeo]:https://vimeo.com/groups/166800
 [Processinglue sample movies on vimeo]:https://vimeo.com/groups/205577
+[class showing BVH data by Rhizomatiks]:https://github.com/perfume-dev/example-processing
+[saito obj loader]:http://code.google.com/p/saitoobjloader/
