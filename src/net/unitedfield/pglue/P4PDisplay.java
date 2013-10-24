@@ -86,10 +86,14 @@ public class P4PDisplay {
 	protected	void	drawShape(PGraphics3D g){
 		g.beginShape();		  
 		g.texture(appletImage);
-		g.vertex(-dWidth/2, -dHeight/2, 0, 0, 0);
-		g.vertex( dWidth/2, -dHeight/2, 0, appletImage.width, 0);		  
-		g.vertex( dWidth/2,  dHeight/2, 0, appletImage.width, appletImage.height);		 
-		g.vertex(-dWidth/2,  dHeight/2, 0, 0, appletImage.height);
+		g.vertex(-dWidth/2, -dHeight, 0, 0, 0);
+		g.vertex( dWidth/2, -dHeight, 0, appletImage.width, 0);		  
+		g.vertex( dWidth/2,  0,       0, appletImage.width, appletImage.height);		 
+		g.vertex(-dWidth/2,  0,       0, 0, appletImage.height);
+//		g.vertex(-dWidth/2, 0, 0, 0, 0);
+//		g.vertex( dWidth/2, 0, 0, appletImage.width, 0);		  
+//		g.vertex( dWidth/2, dHeight, 0, appletImage.width, appletImage.height);		 
+//		g.vertex(-dWidth/2, dHeight, 0, 0, appletImage.height);
 		g.endShape();	
 	}
 		

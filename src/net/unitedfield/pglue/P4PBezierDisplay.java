@@ -34,20 +34,20 @@ public class P4PBezierDisplay  extends P4PDisplay {
 	  if(parametricPoints[0].y==0 && parametricPoints[bezierRes].y==0){	        // height direction is y
 		  for(int i=0;i<= bezierRes;i++){		    	  		
 			  float u = appletImage.width / bezierRes *i;		  
-			  g.vertex(parametricPoints[i].x,  dHeight/2, parametricPoints[i].z, u, 0);
-			  g.vertex(parametricPoints[i].x, -dHeight/2, parametricPoints[i].z, u, appletImage.height);		  
+			  g.vertex(parametricPoints[i].x,  -dHeight,       parametricPoints[i].z, u, 0);
+			  g.vertex(parametricPoints[i].x,  0, parametricPoints[i].z, u, appletImage.height);		  
 		  }
 	  }else if(parametricPoints[0].z==0 && parametricPoints[bezierRes].z==0){	// height direction is z
 		  for(int i=0;i<= bezierRes;i++){		    	  		
 			  float u = appletImage.width / bezierRes *i;		  
-			  g.vertex(parametricPoints[i].x, parametricPoints[i].y, -dHeight/2, u, 0);
-			  g.vertex(parametricPoints[i].x, parametricPoints[i].y,  dHeight/2, u, appletImage.height);		  
+			  g.vertex(parametricPoints[i].x, parametricPoints[i].y, 0, u, 0);
+			  g.vertex(parametricPoints[i].x, parametricPoints[i].y, -dHeight, u, appletImage.height);		  
 		  }
 	  }else if(parametricPoints[0].z==0 && parametricPoints[bezierRes].z==0){	// height direction is x
 		  for(int i=0;i<= bezierRes;i++){		    	  		
 			  float u = appletImage.width / bezierRes *i;		  
-			  g.vertex(-dHeight/2, parametricPoints[i].y, parametricPoints[i].z, u, 0);
-			  g.vertex( dHeight/2, parametricPoints[i].y, parametricPoints[i].z, u, appletImage.height);		  
+			  g.vertex(0,       parametricPoints[i].y, parametricPoints[i].z, u, 0);
+			  g.vertex(-dHeight, parametricPoints[i].y, parametricPoints[i].z, u, appletImage.height);		  
 		  }
 	  }
 	  

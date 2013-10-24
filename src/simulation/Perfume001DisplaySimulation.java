@@ -27,7 +27,7 @@ public class Perfume001DisplaySimulation extends PApplet{
 	  
 	  applet = new SoundSpectrum();
 	  display = new P4PDisplay(this, 128, 120, applet, 512, 480, true);
-	  display.translate(640, 60, 0);
+	  display.translate(30, 0, 0);
 		
 	  loop();
 	}

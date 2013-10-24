@@ -43,7 +43,7 @@ public class Perfume001CaptureSimulation extends PApplet implements Draw2PGraphi
 	  // deploy devices
 	  capture.setLocation(width/2, 200, 350);
 	  capture.setLookAt(width/2,   200, -200);
-	  display.translate(width/2, -300, -1500);
+	  display.translate(width/2, -900, -1500);
 
 	  // set music
 	  minim = new Minim(this);

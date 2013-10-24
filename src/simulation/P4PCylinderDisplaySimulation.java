@@ -5,6 +5,7 @@ import processing.core.PApplet;
 import processing.core.PVector;
 import saito.objloader.OBJModel;
 import simulation.p5.ColorBars;
+import simulation.p5.Distance2D;
 import simulation.p5.SineWave;
 
 public class P4PCylinderDisplaySimulation extends PApplet {
@@ -25,14 +26,16 @@ public class P4PCylinderDisplaySimulation extends PApplet {
 	    
 		applet1 = new ColorBars();
 		applet1back = new SineWave();
-		cylinderdisplay1 = new P4PCylinderDisplay(this, 30f, 30f, 32, applet1, 200,200, false);
+		cylinderdisplay1     = new P4PCylinderDisplay(this, 30f, 30f, 32, applet1, 200,200, false);
 		cylinderdisplay1back = new P4PCylinderDisplay(this, 29.5f, 30f, 32, applet1back, 640,360, false);
-		cylinderdisplay1.translate(0,-15, 0);
-		cylinderdisplay1back.translate(0,-15, 0);	
+		cylinderdisplay1.translate(-50, 0, -50);
+		cylinderdisplay1back.translate(-50, 0, -50);	
 		
-		applet2 = new ColorBars();
-		cylinderdisplay2 = new P4PCylinderDisplay(this, 20f, 120f, 32, applet2, 200,200, false);
-		cylinderdisplay2.translate(50,-60, 50);		
+		//applet2 = new ColorBars();
+		//cylinderdisplay2 = new P4PCylinderDisplay(this, 20f, 120f, 32, applet2, 200,200, true);
+		applet2 = new Distance2D();
+		cylinderdisplay2 = new P4PCylinderDisplay(this, 20f, 120f, 32, applet2, 640,360, true);
+		cylinderdisplay2.translate(50, 0, 50);		
 	}
 	
 	public void	draw(){

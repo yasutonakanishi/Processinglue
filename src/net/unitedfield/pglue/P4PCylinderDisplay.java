@@ -22,8 +22,8 @@ public class P4PCylinderDisplay extends P4PDisplay {
 		tubeZ = new float[tubeRes+1];
 		float angle = 360.0f / tubeRes;
 	    for (int i = 0; i < tubeRes+1; i++) {
-	      tubeX[i] = parentApplet.cos(parentApplet.radians(i * angle));
-	      tubeZ[i] = parentApplet.sin(parentApplet.radians(i * angle));
+	      tubeX[i] = parentApplet.sin(parentApplet.radians(i * angle));
+	      tubeZ[i] = parentApplet.cos(parentApplet.radians(i * angle));	      
 	    }
 	}
 	
@@ -33,9 +33,9 @@ public class P4PCylinderDisplay extends P4PDisplay {
 	  	for (int i = 0; i < tubeRes+1; i++) {	  	    
 	  		float x = tubeX[i] * radius;
 	  	    float z = tubeZ[i] * radius;
-	  	    float u = appletImage.width / tubeRes * i;
-	  	    g.vertex(x,  dHeight/2, z, u, 0);
-	  	    g.vertex(x, -dHeight/2, z, u, appletImage.height);	  	  
+	  	    float u = appletImage.width / tubeRes * i;	  	    
+	  	    g.vertex(x, 0,        z, u, appletImage.height);
+	  	    g.vertex(x, -dHeight, z, u, 0);
 	  	}
 	  	g.endShape();  
 	}			  
