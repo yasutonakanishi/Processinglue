@@ -37,8 +37,7 @@ public class BezierDisplaysScapeSimulation extends PApplet {
 			bezierdisplay.translate(-400+i%3*400, 0, -400+i/3*400);
 			
 			displays.add(bezierdisplay);
-		}
-		
+		}		
 	}
 	
 	private void drawGrid() {
@@ -76,8 +75,7 @@ public class BezierDisplaysScapeSimulation extends PApplet {
 	    for(P4PBezierDisplay bezierdisplay : displays){
 	    	bezierdisplay.rotate(0f, ry, 0f);	
 	    	bezierdisplay.draw();
-	    }
-	    
+	    }	    
 	}
 
 	public void mouseDragged(){

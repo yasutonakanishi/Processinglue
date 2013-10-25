@@ -9,8 +9,7 @@ import simulation.p5.Distance2D;
 import simulation.p5.SineWave;
 
 public class P4PCylinderDisplaySimulation extends PApplet {
-	float rotX, rotY;
-		
+	float rotX, rotY;		
 	OBJModel model;
 	
 	PApplet	applet1, applet1back, applet2;
