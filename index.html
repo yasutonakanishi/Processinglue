@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Processinglue</title>
+<meta name="description" content="A library for the Processing programming environment" />
+<meta name="keywords" content="processing.org, library, Simulation, Installation" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="ROBOTS" content="index,follow,archive" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="author" content="Yasuto Nakanishi" />
+<meta name="Rating" content="General" />
+<meta name="revisit-after" content="7 Days" />
+<meta name="doc-class" content="Living Document" />
+<link rel="stylesheet" type="text/css" href="./stylesheet.css">
+</head>
+<body>
+	<div id="container">
+	
+		<div id="header">
+			<h1>Processinglue</h1>
+		</div>
+		
+		<div id="menu" class="clear">
+			<ul>
+				<li><a href="#about">About</a> \ </li>
+				<li><a href="#download">Download</a> \ </li>
+				<li><a href="#download">Installation</a> \ </li>
+				<li><a href="#examples">Examples</a> \ </li>
+				<li><a href="./reference/index.html" target="_blank">Reference</a> \ </li>
+				<!-- <li><a href="#demos">Demos</a> \ </li> -->				
+				<!-- <li><a href="#misc">Misc</a> \ </li> -->
+				<a href="#images">Images</a>
+			</ul>
+		</div>
+		
+		<div id="content" class="clear">
+			
+			<div id="about">
+			<h2>Processinglue</h2>
+			<p>
+			A library by <a href="https://github.com/yasutonakanishi/">Yasuto Nakanishi</a> for the <a href="http://www.processing.org" target="_blank">Processing</a> programming environment.<br>
+			Last update, 03/11/2016.
+			</p>
+			<p>
+			Processinglue is a package for simulating how an interactive system developed with Processing runs in a virtual space, and is a successor of Citycompiler.
+			<br>
+			Virtual display and virtual camera for PApplet that runs within another PApplet, thus this library enables a spatial simulation of Processing installation using a large display or a large screen.
+			<br>
+			 It is possible to sketch or prototype interactive system with various sizes or locations of displays. This enables to take PApplet out from small display world and help to exhibit Processing installation. 
+			<br>
+			You might develop different shapes of virtual display with developing a sub class of PglueDisplay. A virtual projector can be also developed based on shadow mapping.
+			</p>
+			</div>
+			
+			
+			
+			<div id="download" class="clear">
+			<h2>Download</h2>
+			<p>
+			Download Processinglue version 1.0.0 in 
+			<a href="./download/Processinglue.zip">.zip format</a>.
+			</p>
+			<h2>Installation</h2>
+			<p>
+			Unzip and put the extracted Processinglue folder into the libraries folder of your Processing sketches. Reference and examples are included in the Processinglue folder.
+			</p>
+			</div>	
+			
+			
+			<div id="resources">
+			<p><strong>Keywords</strong>. Simulation, Installation</p>
+			<p><strong>Reference</strong>. Have a look at the javadoc reference <a href="./reference/index.html" target="_blank">here</a>. A copy of the reference is included in the .zip as well.</p>		
+			<p><strong>Source</strong>. The source code of Processinglue is available at <a href="https://github.com/yasutonakanishi/Processinglue">GitHub</a>, and its repository can be browsed <a href="https://github.com/yasutonakanishi/Processinglue.git" target="_blank">here</a>.</p>			
+			</div>
+			
+			
+			<div id="examples" class="clear">
+			<h2>Examples</h2>
+			<p>Find a list of examples in the current distribution of Processinglue, or have a look at them by following the links below. </p>
+			<ul>
+			<li><a href="examples/PglueCaptureTest/PglueCaptureTest.pde">PglueCaptureTest</a>:a virtual camera and a virtual display example</li>
+			<li><a href="examples/PglueDisplayTest/PglueDisplayTest.pde">PglueDisplayTest</a>: a virtual display example</li> 
+			</ul>
+			<p>
+			Examples on CityCompier are on <a href="https://vimeo.com/groups/166800">https://vimeo.com/groups/166800</a>.
+			</p>
+			
+			</div>
+			
+			
+			<div id="info">
+			<h2>Tested</h2>
+			<p>
+			<!-- on which platform has the library been tested? -->
+			<strong>Platform</strong> osx,windows
+			
+			<!-- which processing version did you use for testing your library? -->
+			<br /><strong>Processing</strong> 3.0
+			
+			<!-- does your library depend on any other library or framework? -->
+			<br /><strong>Dependencies</strong> None
+			</p>
+			</div>
+		
+			
+			<!-- use the demos section for a list of applets run in a browser. -->
+			<!--
+			<div id="demos" class="clear">
+				<h2>demos</h2>
+				<p>
+				find a list of online applet demos below.
+				
+				<ul>
+					<li><a href="./applets/demo/index.html">demo</a></li>
+				</ul>
+				</p>
+			</div>
+			-->
+			
+			<!-- use the misc section for other relevant information. Activate the link to the misc section in the menu above. -->
+			<!--
+			<div id="misc" class="clear">
+				<p></p>
+			</div>
+			-->
+			
+			
+			<div id="images" class="clear">
+			
+			<p>An installation simulation of a large display showing a PApplet and a virtual flying camera infront of the virtual display
+			<img src="./images/PglueCaptureTest.png" alt="/PglueCaptureTest" width="800">
+			</p>
+			<p>An installation simulation of a large display showing a PApplet
+			<img src="./images/PglueDisplayTest.png" alt="PglueDisplayTest" width="800">
+			</p>
+			</div>
+			
+			
+			
+			<br class="clear" />
+		</div>
+		
+		<div id="footer">
+			<p>by Yasuto Nakanishi, (c) 2016.</p>
+		</div>
+	</div>
+</body>
+</html>
